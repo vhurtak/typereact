@@ -1,0 +1,21 @@
+{
+  "name": "type-react",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Senior frontend/fullstack prep: TypeScript, React, Angular, Next.js, NestJS side by side",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:core": "npm run build -w @lab/core",
+    "dev:react": "npm run dev -w react-lab",
+    "dev:angular": "npm run start -w angular-lab",
+    "dev:next": "npm run dev -w next-lab",
+    "dev:nest": "npm run start:dev -w nest-api",
+    "test": "npm run test -w @lab/core -w react-lab",
+    "test:core": "npm run test -w @lab/core",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": { "node": ">=20" }
+}

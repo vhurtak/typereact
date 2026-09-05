@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.next/
+out/
+coverage/
+.angular/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.local
+dist-cjs/
+out-tsc/

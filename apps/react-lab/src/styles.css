@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fbfbfa;
+  --fg: #1a1a18;
+  --muted: #6b6b66;
+  --line: #e0e0dc;
+  --card: #ffffff;
+  --accent: #3b5bdb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16161a;
+    --fg: #ececea;
+    --muted: #9a9a95;
+    --line: #2c2c32;
+    --card: #1e1e23;
+    --accent: #8ea3f0;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 900px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 22px; margin: 0 0 4px; }
+h2 { font-size: 16px; margin: 0 0 12px; }
+.muted { color: var(--muted); }
+.hint { color: var(--muted); font-size: 13px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.tabs { display: flex; gap: 6px; margin: 16px 0; flex-wrap: wrap; }
+.tab, button, select { font: inherit; }
+button, select, .input {
+  border: 1px solid var(--line); background: var(--card); color: var(--fg);
+  border-radius: 7px; padding: 6px 10px; cursor: pointer;
+}
+.input { cursor: text; width: 100%; }
+.tab.active { border-color: var(--accent); color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+.checkbox { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); }
+.status { margin: 10px 0; color: var(--muted); font-size: 13px; }
+.results { list-style: none; margin: 0; padding: 0; }
+.results li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; border-bottom: 1px solid var(--line); }
+th button { border: 0; background: none; padding: 8px 6px; width: 100%; text-align: left; }
+td { padding: 8px 6px; border-bottom: 1px solid var(--line); }
+.viewport { height: 320px; overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; }
+.viewport li { padding: 0 8px; font-size: 13px; line-height: 32px; white-space: nowrap; }
+.value { font-size: 32px; font-variant-numeric: tabular-nums; margin: 8px 0; }
+code { background: color-mix(in srgb, var(--fg) 8%, transparent); padding: 1px 4px; border-radius: 4px; }
