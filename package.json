@@ -15,7 +15,8 @@
     "dev:nest": "npm run start:dev -w nest-api",
     "test": "npm run test -w @lab/core -w react-lab",
     "test:core": "npm run test -w @lab/core",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lesson:check": "tsc -p docs/01-typescript/examples --noEmit"
   },
   "engines": { "node": ">=20" }
 }

@@ -1,5 +1,9 @@
 # TypeScript for senior interviews
 
+> **Looking for the full reference?** This page is the interview-prep summary.
+> The complete handbook — 17 chapters, every feature, with compiler-verified examples —
+> is in [`handbook/`](handbook/00-index.md). Verify it with `npm run lesson:check`.
+
 The bar is not "I add types". It is: can you model a domain so wrong states do not
 compile, and can you read an error message from a generic three levels deep.
 
